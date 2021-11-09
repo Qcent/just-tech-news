@@ -1,0 +1,26 @@
+{
+    "name": "just-tech-news",
+    "version": "1.0.0",
+    "description": "Express and Sequelize powered Node.js app for a tech blog",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Qcent/just-tech-news.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Qcent/just-tech-news/issues"
+    },
+    "homepage": "https://github.com/Qcent/just-tech-news#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "mysql2": "^2.3.3-rc.0",
+        "sequelize": "^6.9.0"
+    }
+}
