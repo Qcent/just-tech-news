@@ -90,7 +90,7 @@ router.post('/', (req, res) => {
 router.put('/upvote', (req, res) => {
 
     // create the vote
-    Vote.upvote(req.body, { Vote })
+    Post.upvote(req.body, { Vote })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {
             console.log(err);
