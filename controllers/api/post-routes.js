@@ -72,11 +72,10 @@ router.get('/:id', (req, res) => {
 
 //post a new post
 router.post('/', (req, res) => {
-    // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
     Post.create({
             title: req.body.title,
             post_url: req.body.post_url,
-            user_id: req.body.user_id
+            user_id: req.session.user_id
         })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {

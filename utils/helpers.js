@@ -7,7 +7,6 @@ module.exports = {
     },
 
     format_plural: (word, num) => {
-        console.log(`Word: ${word} ||| Num: ${num}`)
         if (num > 1 || num === 0) return word + 's';
         return word;
     },
