@@ -16,3 +16,13 @@ test('format_plural() returns correct pluralization', () => {
     expect(helper.format_plural(many)).toBe('Lions');
     expect(helper.format_plural(none)).toBe('Lions');
 });
+
+test('format_url() returns a simplified url string', () => {
+    const url1 = helper.format_url('http://test.com/page/1');
+    const url2 = helper.format_url('https://www.coolstuff.com/abcdefg/');
+    const url3 = helper.format_url('https://www.google.com?q=hello');
+
+    expect(url1).toBe('test.com');
+    expect(url2).toBe('coolstuff.com');
+    expect(url3).toBe('google.com');
+});
