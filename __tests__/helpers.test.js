@@ -8,13 +8,10 @@ test('format_date() returns a date string', () => {
 
 
 test('format_plural() returns correct pluralization', () => {
-    let one = ["Lion", 1];
-    let many = ["Lion", 2];
-    let none = ["Lion", 0];
 
-    expect(helper.format_plural(one)).toBe('Lion');
-    expect(helper.format_plural(many)).toBe('Lions');
-    expect(helper.format_plural(none)).toBe('Lions');
+    expect(helper.format_plural("Lion", 1)).toBe('Lion');
+    expect(helper.format_plural("Lion", 8)).toBe('Lions');
+    expect(helper.format_plural("Lion", 0)).toBe('Lions');
 });
 
 test('format_url() returns a simplified url string', () => {

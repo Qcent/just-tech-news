@@ -6,7 +6,8 @@ module.exports = {
       ).getFullYear()}`;
     },
 
-    format_plural: ([word, num]) => {
+    format_plural: (word, num) => {
+        console.log(`Word: ${word} ||| Num: ${num}`)
         if (num > 1 || num === 0) return word + 's';
         return word;
     },
@@ -18,5 +19,5 @@ module.exports = {
             .replace('www.', '')
             .split('/')[0]
             .split('?')[0];
-    },
+    }
 }
