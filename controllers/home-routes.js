@@ -31,7 +31,7 @@ router.get('/', (req, res) => {
 
             res.render('homepage', {
                 posts,
-                loggedIn: req.session.loggedIn
+                session: req.session
             });
         })
         .catch(err => {
@@ -76,7 +76,7 @@ router.get('/post/:id', (req, res) => {
             const post = dbPostData.get({ plain: true });
 
             // pass data to template
-            res.render('single-post', { post, loggedIn: req.session.loggedIn });
+            res.render('single-post', { post, session: req.session });
         })
         .catch(err => {
             console.log(err);

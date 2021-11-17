@@ -13,9 +13,12 @@
         <header>
             <h1>
                 <a href="/">Just Tech News</a>
+                {{#if session.loggedIn}}
+                <span>: Welcome {{session.username}}</span>
+                {{/if}}
             </h1>
             <nav>
-                {{#if loggedIn}}
+                {{#if session.loggedIn}}
                 <a href="/dashboard">dashboard</a>
                 <button id="logout" class="btn-no-style">logout</button>
                 {{else}}
@@ -30,7 +33,7 @@
             Thanks for visiting!
         </footer>
     </div>
-    {{#if loggedIn}}
+    {{#if session.loggedIn}}
     <script src="/javascript/logout.js"></script>
     {{/if}}
 </body>
